@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cybersecurity: Legal and Ethical Perspectives</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f7;--panel:#fff;--ink:#12202b;--mute:#4d5b66;--line:#d5dce1;--eth:#0b6b88;--eth-bg:#e0f0f5;--leg:#a45f0a;--leg-bg:#fbefd9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10181f;--panel:#17222b;--ink:#e8eef2;--mute:#9fb0bc;--line:#2b3a46;--eth:#5cc3e0;--eth-bg:#14323d;--leg:#f0b254;--leg-bg:#3a2b12}}
+:root[data-theme="dark"]{--bg:#10181f;--panel:#17222b;--ink:#e8eef2;--mute:#9fb0bc;--line:#2b3a46;--eth:#5cc3e0;--eth-bg:#14323d;--leg:#f0b254;--leg-bg:#3a2b12}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Bitter,Georgia,serif;line-height:1.2;margin:0}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:18px;overflow-x:auto;padding:14px 20px;z-index:5;white-space:nowrap;font-size:14px;font-weight:500}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover,nav a:focus-visible{color:var(--ink);outline:none;text-decoration:underline}
+main{max-width:920px;margin:0 auto;padding:0 20px}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(28px,7vw,56px)}
+.hero p{max-width:60ch;color:var(--mute);font-size:18px;margin:18px 0 0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:32px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.duo div{padding:20px}
+.duo .l{background:var(--leg-bg)}.duo .e{background:var(--eth-bg)}
+.duo b{font-family:Bitter,Georgia,serif;font-size:22px;display:block}
+.duo .l b{color:var(--leg)}.duo .e b{color:var(--eth)}
+.duo span{font-size:14px;color:var(--mute)}
+section{padding:36px 0;border-top:1px solid var(--line)}
+section h2{font-size:28px;margin-bottom:12px}
+section>p{max-width:68ch;color:var(--mute);margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-left-width:4px;padding:16px;border-radius:4px}
+.card.e{border-left-color:var(--eth)}.card.l{border-left-color:var(--leg)}
+.card h3{font-size:18px;margin-bottom:6px}.card p{margin:0;font-size:15px;color:var(--mute)}
+.table{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:4px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--leg-bg);font-weight:600}tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;white-space:nowrap}
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tabs button{font:inherit;font-weight:500;border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 16px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--eth);color:var(--bg);border-color:var(--eth)}
+.tabs button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.panel{background:var(--panel);border:1px solid var(--line);padding:18px;border-radius:4px}
+.panel[hidden]{display:none}.panel h3{margin-bottom:8px;font-size:20px}.panel p{margin:0 0 8px}
+.panel .t{font-size:14px;color:var(--mute)}
+ol.steps{padding-left:20px;margin:0}ol.steps li{margin-bottom:6px}
+.quote{background:var(--eth-bg);padding:20px;border-radius:4px;font-family:Bitter,Georgia,serif;font-size:19px}
+footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+body{overflow-wrap:anywhere}
+@media (max-width:640px){
+body{font-size:15px}
+main{padding:0 16px}nav{padding:12px 16px;gap:16px}
+.duo{grid-template-columns:1fr}.hero{padding:32px 0 28px}.hero p{font-size:16px}
+section{padding:28px 0}section h2{font-size:24px}
+.table{border:0;background:none;overflow:visible}
+table,tbody,tr,td{display:block;width:100%;min-width:0}
+tr:first-child{display:none}
+tr{background:var(--panel);border:1px solid var(--line);border-radius:4px;margin-bottom:10px;padding:8px 0}
+td{border:0;padding:4px 14px;white-space:normal}
+td[data-label]::before{content:attr(data-label) ": ";font-weight:600;color:var(--mute)}
+td:first-child{font-family:Bitter,Georgia,serif;font-size:17px}
+.tabs button{flex:1 1 auto;text-align:center}
+.quote{font-size:17px}
+}
+@media (min-width:1100px){main{max-width:1040px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav>
+<a href="#basics">Basics</a><a href="#ethics">Ethical side</a><a href="#law">Legal side</a><a href="#india">India</a><a href="#world">World</a><a href="#cases">Dilemmas</a><a href="#end">Conclusion</a>
+</nav>
+<main>
+<header class="hero">
+<h1>Cybersecurity: Legal and Ethical Perspectives</h1>
+<p>Protecting digital systems is not only a technical job. Every security decision also raises two questions: what does the law require, and what is the right thing to do?</p>
+<div class="duo">
+<div class="l"><b>Law</b><span>What you <em>must</em> do. Enforced by courts and penalties.</span></div>
+<div class="e"><b>Ethics</b><span>What you <em>should</em> do. Guided by values and professional duty.</span></div>
+</div>
+</header>
+
+<section id="basics">
+<h2>Cybersecurity basics</h2>
+<p>Cybersecurity means protecting computers, networks and data from unauthorised access, damage or misuse. Three goals sit at the centre, known as the CIA triad.</p>
+<div class="grid">
+<div class="card"><h3>Confidentiality</h3><p>Only authorised people can see the data.</p></div>
+<div class="card"><h3>Integrity</h3><p>Data is not changed without permission.</p></div>
+<div class="card"><h3>Availability</h3><p>Systems work when people need them.</p></div>
+</div>
+</section>
+
+<section id="ethics">
+<h2>Ethical perspectives</h2>
+<p>Ethics covers situations where an action may be legal but still harmful, or the other way round. Security professionals are trusted with powerful access, so their duty goes beyond the rulebook.</p>
+<div class="grid">
+<div class="card e"><h3>Privacy vs security</h3><p>Monitoring can stop attacks, but too much of it harms user privacy. The aim is the least intrusive control that works.</p></div>
+<div class="card e"><h3>Informed consent</h3><p>Users should know what data is collected, why, and for how long.</p></div>
+<div class="card e"><h3>Responsible disclosure</h3><p>Report a vulnerability to the owner first and allow time to fix it before going public.</p></div>
+<div class="card e"><h3>Insider trust</h3><p>Admins and employees can see sensitive data. Access must be limited and never misused.</p></div>
+<div class="card e"><h3>AI and deepfakes</h3><p>AI helps defenders, but also powers realistic phishing and fake media. Developers share responsibility for misuse.</p></div>
+<div class="card e"><h3>Cyber warfare</h3><p>Attacks on hospitals, power grids or banks can harm civilians, which raises serious moral questions.</p></div>
+</div>
+<h3 style="margin:26px 0 12px">Types of hackers</h3>
+<div class="table"><table>
+<tr><th>Type</th><th>Permission</th><th>Intent</th><th>Verdict</th></tr>
+<tr><td>White hat</td><td data-label="Permission">Yes</td><td data-label="Intent">Improve security</td><td data-label="Verdict">Ethical and legal</td></tr>
+<tr><td>Grey hat</td><td data-label="Permission">No</td><td data-label="Intent">Often good, but unauthorised</td><td data-label="Verdict">Ethically unclear, legally risky</td></tr>
+<tr><td>Black hat</td><td data-label="Permission">No</td><td data-label="Intent">Profit or damage</td><td data-label="Verdict">Unethical and illegal</td></tr>
+</table></div>
+</section>
+
+<section id="law">
+<h2>Legal perspectives</h2>
+<p>Cyber law defines which digital acts are crimes, how personal data must be handled, and what organisations must do after a breach. Typical areas:</p>
+<div class="grid">
+<div class="card l"><h3>Cybercrime</h3><p>Hacking, identity theft, online fraud, ransomware.</p></div>
+<div class="card l"><h3>Data protection</h3><p>Rules on collecting, storing and sharing personal data.</p></div>
+<div class="card l"><h3>Breach reporting</h3><p>Duty to inform authorities and affected users.</p></div>
+<div class="card l"><h3>Intellectual property</h3><p>Piracy, software cracking and code theft.</p></div>
+</div>
+</section>
+
+<section id="india">
+<h2>Indian legal framework</h2>
+<p>Three main sources apply to most cybersecurity matters in India.</p>
+<div class="table"><table>
+<tr><th>Law</th><th>What it covers</th></tr>
+<tr><td>IT Act, 2000</td><td>Main cyber law. Sec 43 (unauthorised access or damage), 66 (computer offences), 66C (identity theft), 66D (cheating by impersonation), 66E (privacy violation), 66F (cyber terrorism), 67 (obscene content), 70 (protected systems), 72 (breach of confidentiality).</td></tr>
+<tr><td>DPDP Act, 2023</td><td>Protects digital personal data. Based on consent and purpose limits. Organisations (data fiduciaries) must keep data safe. Penalties can reach up to ₹250 crore.</td></tr>
+<tr><td>CERT-In Directions, 2022</td><td>Certain cyber incidents must be reported to CERT-In within 6 hours. Logs must be kept for 180 days.</td></tr>
+</table></div>
+</section>
+
+<section id="world">
+<h2>International view</h2>
+<p>Cybercrime crosses borders, so many countries follow shared or similar rules. Tap a tab.</p>
+<div class="tabs" role="tablist">
+<button role="tab" aria-selected="true" data-t="0">GDPR (EU)</button>
+<button role="tab" aria-selected="false" data-t="1">CFAA (USA)</button>
+<button role="tab" aria-selected="false" data-t="2">Budapest Convention</button>
+</div>
+<div class="panel" data-p="0"><h3>General Data Protection Regulation</h3><p>Gives people rights over their data, including access and erasure. Breaches must be reported within 72 hours.</p><p class="t">Fines: up to €20 million or 4% of global turnover, whichever is higher.</p></div>
+<div class="panel" data-p="1" hidden><h3>Computer Fraud and Abuse Act</h3><p>US federal law against accessing computers without authorisation or beyond authorised access.</p><p class="t">Often debated for how broadly it treats security research.</p></div>
+<div class="panel" data-p="2" hidden><h3>Convention on Cybercrime (2001)</h3><p>First major international treaty on cybercrime. It aligns national laws and helps countries cooperate on evidence and investigation.</p><p class="t">India has not signed it.</p></div>
+</section>
+
+<section id="cases">
+<h2>Ethical dilemmas to think about</h2>
+<p>Real work is rarely black and white. Pick one and decide what you would do.</p>
+<div class="grid">
+<div class="card e"><h3>Found a bug, no permission</h3><p>You spot a flaw in a website while browsing. Do you test it further, report it, or ignore it?</p></div>
+<div class="card e"><h3>Boss hides a breach</h3><p>Your company wants to stay silent about leaked customer data to protect its image.</p></div>
+<div class="card e"><h3>Employee monitoring</h3><p>Is it fair to read staff emails to prevent data leaks?</p></div>
+</div>
+<h3 style="margin:26px 0 12px">A simple way to decide</h3>
+<ol class="steps">
+<li>Do I have permission?</li>
+<li>Is it legal?</li>
+<li>Who could be harmed?</li>
+<li>Would I be comfortable if this became public?</li>
+</ol>
+</section>
+
+<section id="end">
+<h2>Conclusion</h2>
+<div class="quote">Law sets the minimum. Ethics sets the standard. Good cybersecurity needs both.</div>
+<p style="margin-top:16px">Technology keeps changing faster than legislation, so professionals must use sound judgement, respect privacy, and take responsibility for the systems they protect.</p>
+</section>
+</main>
+<footer><main>Prepared for academic purposes. Laws and penalties may be amended, so check official sources for the latest versions.</main></footer>
+<script>
+document.querySelectorAll('.tabs button').forEach(function(b){
+b.addEventListener('click',function(){
+document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected',x===b)});
+document.querySelectorAll('.panel').forEach(function(p){p.hidden=p.dataset.p!==b.dataset.t});
+});});
+</script>
+</body>
+</html>
